@@ -11,13 +11,13 @@ export default function Counter() {
   const addFeedback = e => {
     switch (e.target.textContent) {
       case 'Good':
-        setGood(good + 1);
+        setGood(prevState => prevState + 1);
         break;
       case 'Neutral':
-        setNeutral(neutral + 1);
+        setNeutral(prevState => prevState + 1);
         break;
       case 'Bad':
-        setBad(bad + 1);
+        setBad(prevState => prevState + 1);
         break;
       default:
         return;
