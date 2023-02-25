@@ -27,7 +27,7 @@ export default function Counter() {
   const countTotalFeedback = () => good + neutral + bad;
 
   const countPositiveFeedbackPercentage = () =>
-    good === 0 ? '0%' : `${Math.round(good / (countTotalFeedback() / 100))}%`;
+    good === 0 ? 0 : Math.round(good / (countTotalFeedback() / 100));
 
   return (
     <Section title={'Please leave feedback'}>
